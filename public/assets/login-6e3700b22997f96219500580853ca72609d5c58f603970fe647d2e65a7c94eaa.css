@@ -1,0 +1,41 @@
+/* line 2, /Users/youngjoon_lee/Desktop/babyup/app/assets/stylesheets/login.css.scss */
+* {
+  -ms-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* line 11, /Users/youngjoon_lee/Desktop/babyup/app/assets/stylesheets/login.css.scss */
+html, body {
+  width: 100%;
+  height: 100%;
+  background: url(/assets/sativa-99e41e8ed8034d516760d05612ca31de03d5ac2b77e413fd8dfac914abb117cd.png) repeat fixed;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 200;
+}
+
+/* line 18, /Users/youngjoon_lee/Desktop/babyup/app/assets/stylesheets/login.css.scss */
+.login_container {
+  width: 400px;
+  height: 400px;
+  position: absolute;
+  padding: 10px;
+  top: 120px;
+  left: 450px;
+  background: white;
+  border-radius: 5%;
+}
+
+/* line 28, /Users/youngjoon_lee/Desktop/babyup/app/assets/stylesheets/login.css.scss */
+#login_head {
+  font-family: Arial;
+}
+
+/* line 32, /Users/youngjoon_lee/Desktop/babyup/app/assets/stylesheets/login.css.scss */
+h5 {
+  font-weight: bold;
+}

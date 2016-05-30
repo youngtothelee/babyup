@@ -1,0 +1,43 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="/assets/login.css" type="text/css">
+  </head>
+  <body>
+
+    <div class="container">
+    <div class="login_container">
+      <CENTER><h2 id="login_head">회원가입</h2></CENTER> <hr>
+      
+
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= devise_error_messages! %>
+
+
+  <div class="field">
+    <h5>이메일 주소</h5>
+    <%= f.email_field :email, autofocus: true %>
+  </div>
+
+  <div class="field">
+    <h5>비밀번호</h5>
+    <% if @minimum_password_length %>
+    <em>(<%= @minimum_password_length %> 자 이상)</em> <br>
+    <% end %>
+    <%= f.password_field :password, autocomplete: "off" %>
+  </div>
+
+  <div class="field">
+    <h5>비밀번호 확인</h5>
+    <%= f.password_field :password_confirmation, autocomplete: "off" %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "회원가입" %>
+  </div>
+<% end %>
+
+<%= render "devise/shared/links" %>
+  </div>
+  </div>
+  </body>
+  </html>

@@ -1,0 +1,28 @@
+    <%= stylesheet_link_tag  'login', media: 'all', 'data-turbolinks-track' => false %>
+    
+    <div class="container">
+    <div class="login_container">
+
+      <CENTER><h2 id="login_head">로그인</h2></CENTER>
+      
+      <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+        
+          <hr>
+          <h5>이메일 주소</h5>
+          <%= f.email_field :email, autofocus: true %>
+          
+          
+          <h5>비밀번호</h5>
+          <%= f.password_field :password, autocomplete: "off" %>
+        
+      
+        <% if devise_mapping.rememberable? -%>
+            <p><%= f.check_box :remember_me %>아이디 기억하기</p>
+        <% end -%>
+      
+          <span><%= f.submit "로그인" %> </span> <hr>
+        
+      <% end %>
+      <%= render "devise/shared/links" %>
+    </div>
+    </div>

@@ -1,0 +1,44 @@
+
+      <style>
+      #inline {
+          display:inline;
+      }
+      </style>
+
+   <div class="container" style="margin-top: 50px;">
+        <div class="row">
+            <ul class="nav nav-pills">
+            <div class="col-md-1" style="margin-top: 40px;"><li role="presentation"><a href="#">홈케어</a></li></div>
+            <div class="col-md-1" style="margin-top: 40px;"><li role="presentation"><a href="#">야외 활동</a></li> </div>
+               <div style="margin-top: 60px;" class="container" >
+               <button class="btn btn-primary btn-lg pull-right" type="submit" style="float:right" > <a href="/parents_post_write" class="write">글작성 </a></button>
+            </ul>
+        </div>
+          <hr>
+      </div>
+
+       <div class="container" style="margin-top:60px;">
+     <div class="row">
+      <h4> <% @every_post_p.each do |p| %> <h4>
+      글쓴이: <%= p.user.email %> <br>
+      이름: <%= p.name_post_p %> <br>
+      서비스: <%= p.type1_post_p %> <br>
+            <%= p.type2_post_p %> <br>
+      <%= link_to "자세히보기", extendp_path(p) %><br>
+      <br>
+
+
+        <form action="/update_view2/<%= p.id %>" id="inline">
+          <button type="submit" class="btn btn-primary">수정</button>
+        </form>
+
+        <form action="/destroy2/<%= p.id %>" id="inline">
+          <button type="submit" class="btn btn-primary">삭제</button>
+        </form>
+      <hr>
+
+      <% end %>
+     </div>
+     </div>
+
+</div>
