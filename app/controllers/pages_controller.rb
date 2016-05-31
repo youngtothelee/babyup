@@ -31,7 +31,7 @@ class PagesController < ApplicationController
     @parents.care_post_p = params[:care]
     @parents.save
     redirect_to "/mompost"
-  end 
+  end
 
   def destroy2
     @parents = Post.find(params[:post_id])
@@ -59,13 +59,13 @@ class PagesController < ApplicationController
   end
 
 
-  def viewpost 
+  def viewpost
   end
 
 #여기까지~~~~~~
 
   def nanny_post_write
-  
+
   end
 
  def show3
@@ -94,7 +94,7 @@ class PagesController < ApplicationController
     else
       render :text => @nanny.errors.messages
     end
-  
+
   end
 
 
@@ -132,7 +132,7 @@ class PagesController < ApplicationController
     else
       render :text => @nanny.errors.messages
     end
-  
+
   end
 
 
@@ -142,5 +142,9 @@ class PagesController < ApplicationController
 
 
   def mypage
+  end
+
+  def museums
+
   end
 end

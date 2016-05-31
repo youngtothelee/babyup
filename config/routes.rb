@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  
+
   devise_for :users
   root to: "pages#home"
 
@@ -41,7 +41,7 @@ Rails.application.routes.draw do
   get "mypage" => "pages#mypage", as: :mypage
 
   get "signup" => "pages#signup"
-  
+
   get "signup2" => "pages#signup2"
 
   get "signin" => "pages#signin", as: :signin
@@ -71,6 +71,10 @@ Rails.application.routes.draw do
   get 'update_view3/:post_id' => "pages#update_view3"
 
   post 'update_change3/:post_id' => "pages#siljae3"
+
+  #activity links
+
+  get 'museums' => "pages#museums"
 
 
 
